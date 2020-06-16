@@ -5,3 +5,4 @@ Todos mis retos aceptados en diferentes concursos como acepta el reto, adabyron,
 Todos los problemas son hechos por mí. Hay de diferentes plataformas:
   -Acepta el reto: En JAVA, todos aquellos con nombre problemaX.java (Siendo X el numero ID del problema). En C, Acepta-El-Reto-problemaXC.c
   -Google Code Jam: Sin identificador de fase, solo año y problema
+  -HackerRank: HackerRank-X.code donde X es el nombre del problema y code el codigo en el que está escrito
