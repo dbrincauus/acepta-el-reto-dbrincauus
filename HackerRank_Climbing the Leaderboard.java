@@ -10,38 +10,38 @@ public class Solution {
 
     // Complete the climbingLeaderboard function below.
     static int[] climbingLeaderboard(int[] scores, int[] alice) {
-        int an =0;
-      int a = 1;
-      int[] ar = new int[alice.length];
-      for(int i2=alice.length-1;i2>=0;i2--){
-        int xa = scores.length;
-        for(int i=an;i<scores.length;i++){
-         if(alice[i2]>=scores[i] && i!=0){
-           ar[i2]=a+1;
-           xa = i;
-           break;
-         }else if(alice[i2]>=scores[i]){
-           ar[i2]=a;
-           xa = i;
-           break;
-         }else if(ar[i2]==0 && i==scores.length-1){
-           if(scores[i]!=alice[i2]){
-             ar[i2]=a+2;
-           }else{
-             ar[i2]=a+1;
-           }
-           xa = i;
+        int indice =0;
+        int a = 1;
+        int[] ar = new int[alice.length];
+        for(int i2=alice.length-1;i2>=0;i2--){
+        	int xa = scores.length;
+        	for(int i=indice;i<scores.length;i++){
+        		if(alice[i2]>=scores[i] && i!=0){
+        			ar[i2]=a+1;
+        			xa = i;
+        			break;
+        		}else if(alice[i2]>=scores[i]){
+        			ar[i2]=a;
+        			xa = i;
+        			break;
+        		}else if(ar[i2]==0 && i==scores.length-1){
+        			if(scores[i]!=alice[i2]){
+        				ar[i2]=a+2;
+        			}else{
+        				ar[i2]=a+1;
+        			}
+        			xa = i;
            
-         }else{
-           if(i!=0 && scores[i]<scores[i-1] ){
-             a++;
-           }
-         }
-       }
-       an = xa;
+        		}else{
+        			if(i!=0 && scores[i]<scores[i-1] ){
+        				a++;
+        			}
+        		}
+        	}
+        	indice = xa;
  
-      }
-      return ar;
+        }
+        return ar;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
